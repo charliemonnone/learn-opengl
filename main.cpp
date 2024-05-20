@@ -74,11 +74,18 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		float timeValue = glfwGetTime();
-		float greenValue = (sin(timeValue) / 2.0f) + 0.5f;
-		ourShader.use();
-		//ourShader.setFloat("greenChannel", greenValue);
-		ourShader.setFloat("moveRight", greenValue);
+		float xPos = -(cos(timeValue) / 2.0f);
+		float yPos = (sin(timeValue) / 2.0f);
+		float colorRotationR = (xPos );
+		float colorRotationG = (xPos );
+		float colorRotationB = (xPos + cos(yPos));
 
+		ourShader.use();
+		ourShader.setFloat("xPos", xPos);
+		ourShader.setFloat("yPos", yPos);
+		ourShader.setFloat("colorRotationR", colorRotationR);
+		ourShader.setFloat("colorRotationG", colorRotationG);
+		ourShader.setFloat("colorRotationB", colorRotationB);
 
 		glBindVertexArray(VAO);
 		glDrawArrays(GL_TRIANGLES, 0, 3);
