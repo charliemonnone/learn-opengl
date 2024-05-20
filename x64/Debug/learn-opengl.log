@@ -1,3 +1,0 @@
-﻿  main.cpp
-C:\Users\charlie monnone\repos\learn-opengl\main.cpp(76,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  learn-opengl.vcxproj -> C:\Users\charlie monnone\repos\learn-opengl\x64\Debug\learn-opengl.exe
